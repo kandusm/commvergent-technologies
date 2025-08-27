@@ -6,33 +6,26 @@ import Footer from "@/components/Footer";
 //const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://commvergent.com";
 
 export const metadata = {
-  metadataBase: new URL("https://commvergent.com"), // your prod URL
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://commvergent.com"),
   title: "CommVergent Technologies",
-  description:
-    "Building the Future Through Technology and Ideas.",
+  description: "Building the Future Through Technology and Ideas.",
   openGraph: {
     type: "website",
-    url: "https://commvergent.com",
     title: "CommVergent Technologies",
-    description:
-      "Building the Future Through Technology and Ideas.",
+    description: "Building the Future Through Technology and Ideas.",
+    url: "/",
     images: [
-      {
-        url: "/og.jpg",       // 1200×630
-        width: 1200,
-        height: 630,
-        alt: "CommVergent Technologies wordmark and tagline",
-      },
+      { url: "/og.jpg?v=1", width: 1200, height: 630, alt: "CommVergent Technologies" },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title: "CommVergent Technologies",
-    description:
-      "Building the Future Through Technology and Ideas.",
-    images: ["/og.jpg"],      // Twitter/X prefers 2:1-ish; 1200×630 is perfect
+    description: "Building the Future Through Technology and Ideas.",
+    images: ["/og.jpg?v=1"],
   },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

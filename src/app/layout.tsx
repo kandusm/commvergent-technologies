@@ -3,21 +3,30 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://commvergent.com";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://commvergent.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "CommVergent Technologies",
     template: "%s — CommVergent Technologies",
   },
   description: "A senior engineering studio for software, data, and product.",
   openGraph: {
-    siteName: "CommVergent Technologies",
     type: "website",
-    locale: "en_US",
+    siteName: "CommVergent Technologies",
+    images: [
+      {
+        url: "/og.jpg",          // resolved against metadataBase
+        width: 1200,
+        height: 630,
+        alt: "CommVergent Technologies",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    creator: "@commvergent", // if you have one
+    images: ["/og.jpg"],
   },
 };
 

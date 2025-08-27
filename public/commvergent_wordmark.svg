@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="COMMVERGENT TECHNOLOGIES wordmark">
+  <style>
+    .top{font-family:"Eurostile Extended","Microgramma D Extended","Square 721 Ext","Michroma","Aldrich","Orbitron",system-ui,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:0.02em;fill:#8B0E0E;}
+    .bottom{font-family:"Eurostile Extended","Microgramma D Extended","Square 721 Ext","Michroma","Aldrich","Orbitron",system-ui,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;fill:#111111;}
+  </style>
+  <g transform="translate(80,120)">
+    <text class="top" x="0" y="0" font-size="110">COMMVERGENT</text>
+    <text class="bottom" x="0" y="120" font-size="95">TECHNOLOGIES</text>
+  </g>
+</svg>

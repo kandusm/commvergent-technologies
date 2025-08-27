@@ -1,0 +1,32 @@
+export const meta = {
+  title: 'The Site Stack: Next.js 15 + Tailwind 4 + MDX (and a no-backend contact form)',
+  date: '2025-08-26',
+  summary:
+    'A pragmatic stack for a small studio site: fast to ship, easy to edit, and flexible for long-form content.',
+  tags: ['engineering', 'stack'],
+  // hero: "/images/insights/site-stack.jpg",
+}
+
+## Why this stack
+
+- **Next.js 15 (App Router):** file-based routes, server components, easy SEO.
+- **Tailwind 4:** consistent design tokens, small CSS, quick iteration.
+- **MDX:** prose + components in one file—great for Insights and Projects.
+
+## Contact without a backend
+
+We use **Formspree** for the contact form:
+
+- Client-only submit to `https://formspree.io/f/…`
+- Honeypot field (`_gotcha`) and JSON response handling
+- Swap to Resend/Postmark later if needed
+
+## Scheduling
+
+A simple **“Schedule a call”** button links to **Microsoft Bookings**. No iframe needed; open in a new tab for reliability.
+
+## What this buys us
+
+- Editors can add posts as `.mdx` without touching routes.
+- Engineers can embed components inline (charts, callouts).
+- Deploy anywhere; IIS or Vercel both work with the same build.

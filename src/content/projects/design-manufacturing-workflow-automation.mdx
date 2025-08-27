@@ -1,0 +1,54 @@
+export const meta = {
+  title: 'Design and Manufacturing Company Workflow Automation',
+  date: '2016-03-01',
+  client: 'See Our Designs',
+  summary:
+    'Automated product design handoff, store listing management, and manufacturing organization.',
+  // Optional hero image (add a real file under /public/images/projects/)
+  // hero: "/images/projects/design-manufacturing-workflow-automation.jpg",
+}
+
+> Client: **See Our Designs** (2016)
+
+## Overview
+
+We implemented an end-to-end workflow that connects offshore designers, listing/publishing operations, and on-site manufacturing. The system replaces email handoffs and manual listing work with a structured, searchable process that keeps work moving across time zones and delivers a clean production queue.
+
+## Problem
+
+- Designers were offshore in different time zones, causing handoff delays and unclear status.
+- Store listings were manual — including **discrete** product image production — leading to slow updates and inconsistent quality.
+- Manufacturing relied on manually managed print files in shared folders that had to be searched repeatedly.
+
+## Solution
+
+- **Workflow + notifications:** A formal assignment → review → approval flow with robust notifications replaced ad-hoc email threads, enabling asynchronous collaboration across time zones.
+- **Automated listings & images:** Generated listing data from templates and pushed updates via API; automated image overlays/brand frames and stored assets by listing for consistent, publish-ready output.
+- **Central database:** All design and product artifacts captured in a relational database so every asset is **correlated and searchable** (designs ↔ listings ↔ print files ↔ work orders).
+- **Manufacturing organization:** Approved designs auto-generated work orders and labels, feeding a prioritized production queue so the floor always knew what was next.
+
+## How it works
+
+1. **Ingest** — Designers submit assets/specs; validations check completeness.
+2. **Process** — Images run through batch overlay/standardization; metadata is templated and versioned.
+3. **Approve** — Reviewers approve/reject with one click; notifications drive the next step.
+4. **Publish** — Listings and assets are pushed to the storefront/marketplaces.
+5. **Make** — Approved jobs create work orders; the queue updates in real time.
+
+## Tech
+
+- SQL (relational database)
+- ASP.NET MVC 5
+- Batch image processing
+- REST APIs
+- Job queues
+
+## Outcomes
+
+- Eliminated most manual listing steps; consistent, on-brand images across variants.
+- Clear status and continuous handoffs across time zones (fewer stalls, less back-and-forth).
+- Production floor moved from folder hunting to a prioritized, searchable queue of approved jobs.
+
+---
+
+_Want a deeper dive or demo? Get in touch on the **Contact** page._

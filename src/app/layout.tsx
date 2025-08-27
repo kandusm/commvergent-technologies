@@ -1,32 +1,36 @@
-import type { Metadata } from "next";
+//import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://commvergent.com";
+//const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://commvergent.com";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "CommVergent Technologies",
-    template: "%s — CommVergent Technologies",
-  },
-  description: "A senior engineering studio for software, data, and product.",
+export const metadata = {
+  metadataBase: new URL("https://commvergent.com"), // your prod URL
+  title: "CommVergent Technologies",
+  description:
+    "Building the Future Through Technology and Ideas.",
   openGraph: {
     type: "website",
-    siteName: "CommVergent Technologies",
+    url: "https://commvergent.com",
+    title: "CommVergent Technologies",
+    description:
+      "Building the Future Through Technology and Ideas.",
     images: [
       {
-        url: "/og.jpg",          // resolved against metadataBase
+        url: "/og.jpg",       // 1200×630
         width: 1200,
         height: 630,
-        alt: "CommVergent Technologies",
+        alt: "CommVergent Technologies wordmark and tagline",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og.jpg"],
+    title: "CommVergent Technologies",
+    description:
+      "Building the Future Through Technology and Ideas.",
+    images: ["/og.jpg"],      // Twitter/X prefers 2:1-ish; 1200×630 is perfect
   },
 };
 
